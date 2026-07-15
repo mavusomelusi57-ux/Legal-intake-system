@@ -75,6 +75,11 @@ def submit():
         </div>
     </body>
     </html>
+
+    @app.route('/google8ac4eb74c3700bb7.html')
+def google_verify():
+    return "google-site-verification: google8ac4eb74c3700bb7.html"
+
 if __name__ == '__main__':
     initialize_db()
     app.run(host='0.0.0.0' if os.environ.get('PORT') else '127.0.0.1', port=int(os.environ.get('PORT', 5000)), debug=True)
