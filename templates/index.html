@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.M. Mavuso Attorneys — Siteki, Eswatini</title>
+    <style>
+        /* Modern Offline Stylesheet */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8fafc; color: #334155; line-height: 1.6; }
+        header { background-color: #0f172a; color: #ffffff; padding: 20px 40px; border-bottom: 3px solid #fbbf24; }
+        .header-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo h1 { margin: 0; font-size: 24px; tracking-letter: 1px; color: #fbbf24; text-transform: uppercase; }
+        .logo p { margin: 5px 0 0 0; font-size: 12px; color: #94a3b8; }
+        nav a { color: #cbd5e1; text-decoration: none; margin-left: 20px; font-size: 14px; font-weight: 600; text-transform: uppercase; }
+        nav a:hover { color: #fbbf24; }
+        .btn-nav { background-color: #fbbf24; color: #0f172a !important; padding: 8px 16px; border-radius: 6px; }
+        
+        .hero { max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: center; }
+        .badge { background-color: #fef3c7; color: #d97706; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: bold; text-transform: uppercase; }
+        .hero h2 { font-size: 32px; color: #0f172a; margin: 20px 0 10px 0; }
+        .hero p { font-size: 16px; color: #475569; }
+
+        .services-section { background-color: #f1f5f9; padding: 60px 20px; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+        .services-title { text-align: center; font-size: 24px; color: #0f172a; margin-bottom: 40px; text-transform: uppercase; }
+        .grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: #ffffff; padding: 30px; rounded-radius: 12px; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .card h4 { margin: 0 0 10px 0; font-size: 18px; color: #0f172a; border-bottom: 2px solid #fbbf24; padding-bottom: 8px; }
+        
+        .form-section { max-width: 500px; margin: 60px auto; padding: 0 20px; }
+        .form-box { background: #ffffff; padding: 40px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .form-box h3 { margin: 0 0 5px 0; font-size: 20px; text-align: center; color: #0f172a; }
+        .form-box p { margin: 0 0 30px 0; font-size: 12px; text-align: center; color: #64748b; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-size: 12px; font-weight: bold; color: #475569; text-transform: uppercase; margin-bottom: 8px; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; box-sizing: border-box; font-size: 14px; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #fbbf24; background-color: #ffffff; }
+        button { width: 100%; background-color: #0f172a; color: #ffffff; border: none; padding: 14px; border-radius: 8px; font-weight: bold; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; transition: background 0.15s; }
+        button:hover { background-color: #1e293b; }
+        
+        footer { background-color: #020617; text-align: center; padding: 24px; color: #64748b; font-size: 12px; border-t: 1px solid #0f172a; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>E.M. Mavuso Attorneys</h1>
+                <p>Elite Regional Advocacy • Siteki, Eswatini</p>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Practice Areas</a>
+                <a href="#apply" class="btn-nav">Book Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="hero">
+        <span class="badge">Principal Attorney</span>
+        <h2>Ernest Mavuso</h2>
+        <p>Providing premier trial advocacy, robust criminal defense, and meticulous administration of deceased estates. Serving clients across Siteki and the wider region with dedicated, professional legal counsel rooted in integrity and elite legal strategy.</p>
+    </section>
+
+    <section id="services" class="services-section">
+        <h3 class="services-title">Our Legal Services</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Criminal Defense</h4>
+                <p>Strategic trial defense and litigation representation for all complex criminal matters within regional courts.</p>
+            </div>
+            <div class="card">
+                <h4>Trial Advocacy</h4>
+                <p>Aggressive and precise courtroom representation across civil and high-stake legal disputes.</p>
+            </div>
+            <div class="card">
+                <h4>Deceased Estates</h4>
+                <p>Compassionate, thorough management of customary and civil estate distributions and successions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="apply" class="form-section">
+        <div class="form-box">
+            <h3>Request a Case Evaluation</h3>
+            <p>Submit your details to request an intake appointment</p>
+
+            <form action="/submit" method="POST">
+                <div class="form-group">
+                    <label for="client_name">Your Full Name</label>
+                    <input type="text" id="client_name" name="client_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="client_phone">Phone Number</label>
+                    <input type="tel" id="client_phone" name="client_phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service_type">Legal Help Needed</label>
+                    <select id="service_type" name="service_type" required>
+                        <option value="Criminal Defense">Criminal Defense Consultation</option>
+                        <option value="Trial Advocacy">Trial Advocacy Representation</option>
+                        <option value="Deceased Estates">Deceased Estates Administration</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Brief Case Overview</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Provide a brief summary of your legal situation..."></textarea>
+                </div>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 E.M. Mavuso Attorneys. All Rights Reserved. Siteki, Eswatini.</p>
+    </footer>
+
+</body>
+</html>
