@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E.M. Mavuso Attorneys — Siteki, Eswatini</title>
     <style>
-        /* Modern Offline Stylesheet */
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8fafc; color: #334155; line-height: 1.6; }
         header { background-color: #0f172a; color: #ffffff; padding: 20px 40px; border-bottom: 3px solid #fbbf24; }
         .header-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo h1 { margin: 0; font-size: 24px; tracking-letter: 1px; color: #fbbf24; text-transform: uppercase; }
+        .logo h1 { margin: 0; font-size: 24px; color: #fbbf24; text-transform: uppercase; }
         .logo p { margin: 5px 0 0 0; font-size: 12px; color: #94a3b8; }
         nav a { color: #cbd5e1; text-decoration: none; margin-left: 20px; font-size: 14px; font-weight: 600; text-transform: uppercase; }
         nav a:hover { color: #fbbf24; }
@@ -23,21 +22,19 @@
         .services-section { background-color: #f1f5f9; padding: 60px 20px; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
         .services-title { text-align: center; font-size: 24px; color: #0f172a; margin-bottom: 40px; text-transform: uppercase; }
         .grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #ffffff; padding: 30px; rounded-radius: 12px; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .card { background: #ffffff; padding: 30px; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         .card h4 { margin: 0 0 10px 0; font-size: 18px; color: #0f172a; border-bottom: 2px solid #fbbf24; padding-bottom: 8px; }
         
-        .form-section { max-width: 500px; margin: 60px auto; padding: 0 20px; }
-        .form-box { background: #ffffff; padding: 40px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
-        .form-box h3 { margin: 0 0 5px 0; font-size: 20px; text-align: center; color: #0f172a; }
-        .form-box p { margin: 0 0 30px 0; font-size: 12px; text-align: center; color: #64748b; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; font-size: 12px; font-weight: bold; color: #475569; text-transform: uppercase; margin-bottom: 8px; }
-        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; background-color: #f8fafc; box-sizing: border-box; font-size: 14px; }
-        input:focus, select:focus, textarea:focus { outline: none; border-color: #fbbf24; background-color: #ffffff; }
-        button { width: 100%; background-color: #0f172a; color: #ffffff; border: none; padding: 14px; border-radius: 8px; font-weight: bold; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; transition: background 0.15s; }
-        button:hover { background-color: #1e293b; }
+        .action-section { max-width: 500px; margin: 60px auto; padding: 0 20px; }
+        .action-box { background: #ffffff; padding: 40px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); text-align: center; }
+        .action-box h3 { margin: 0 0 10px 0; font-size: 22px; color: #0f172a; }
+        .action-box p { margin: 0 0 30px 0; font-size: 14px; color: #64748b; line-height: 1.5; }
         
-        footer { background-color: #020617; text-align: center; padding: 24px; color: #64748b; font-size: 12px; border-t: 1px solid #0f172a; }
+        /* Premium Email Link Button Styling */
+        .email-button { display: inline-block; width: 100%; background-color: #0f172a; color: #ffffff; text-decoration: none; padding: 16px; border-radius: 8px; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; box-sizing: border-box; transition: background 0.15s; }
+        .email-button:hover { background-color: #1e293b; color: #fbbf24; }
+        
+        footer { background-color: #020617; text-align: center; padding: 24px; color: #64748b; font-size: 12px; }
     </style>
 </head>
 <body>
@@ -51,7 +48,7 @@
             <nav>
                 <a href="#about">About</a>
                 <a href="#services">Practice Areas</a>
-                <a href="#apply" class="btn-nav">Book Consultation</a>
+                <a href="#contact" class="btn-nav">Email Us</a>
             </nav>
         </div>
     </header>
@@ -80,38 +77,17 @@
         </div>
     </section>
 
-    <section id="apply" class="form-section">
-        <div class="form-box">
-            <h3>Request a Case Evaluation</h3>
-            <p>Submit your details to request an intake appointment</p>
+    <!-- Updated Direct Email Block -->
+    <section id="contact" class="action-section">
+        <div class="action-box">
+            <h3>Start Your Case Evaluation</h3>
+            <p>Click the button below to draft a secure consultation request email directly to our offices. Please include your full name, phone number, and a brief summary of your legal matter.</p>
 
-            <form action="/submit" method="POST">
-                <div class="form-group">
-                    <label for="client_name">Your Full Name</label>
-                    <input type="text" id="client_name" name="client_name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="client_phone">Phone Number</label>
-                    <input type="tel" id="client_phone" name="client_phone" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="service_type">Legal Help Needed</label>
-                    <select id="service_type" name="service_type" required>
-                        <option value="Criminal Defense">Criminal Defense Consultation</option>
-                        <option value="Trial Advocacy">Trial Advocacy Representation</option>
-                        <option value="Deceased Estates">Deceased Estates Administration</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Brief Case Overview</label>
-                    <textarea id="message" name="message" rows="4" required placeholder="Provide a brief summary of your legal situation..."></textarea>
-                </div>
-
-                <button type="submit">Submit Application</button>
-            </form>
+            <!-- Custom Mailto Link Configuration -->
+            <a href="mailto:ernest.mavuso.attorneys@://gmail.com Case Consultation Request&body=Dear E.M. Mavuso Attorneys,%0D%0A%0D%0AI would like to request a legal case evaluation.%0D%0A%0D%0A[Please complete your details below]%0D%0A👤 Full Name: %0D%0A📞 Phone Number: %0D%0A⚖️ Service Needed (Criminal Defense / Trial Advocacy / Deceased Estates): %0D%0A📝 Case Brief Description: " 
+               class="email-button">
+                Open Email Client & Compose
+            </a>
         </div>
     </section>
 
