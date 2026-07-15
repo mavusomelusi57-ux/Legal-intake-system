@@ -16,6 +16,10 @@ def initialize_db():
 def index():
     return render_template('index.html')
 
+@app.route('/google8ac4eb74c3700bb7.html', methods=['GET'])
+def google_verify():
+    return "google-site-verification: google8ac4eb74c3700bb7.html"
+
 @app.route('/submit', methods=['POST'])
 def submit():
     name = request.form.get('client_name')
@@ -27,21 +31,6 @@ def submit():
         writer = csv.writer(f)
         writer.writerow([name, phone, service, message])
         
-    return f"Thank you, {name}. Your consultation request for {service} has been received. E.M. Mavuso Attorneys will contact you shortly."
-
-@app.route('/submit', methods=['POST'])
-def submit():
-    name = request.form.get('client_name')
-    phone = request.form.get('client_phone')
-    service = request.form.get('service_type')
-    message = request.form.get('message')
-
-    # 1. Save to your local cloud file
-    with open(DB_FILE, mode='a', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        writer.writerow([name, phone, service, message])
-        
-    # 2. Build the pre-typed message text
     whatsapp_message = (
         f"Hello E.M. Mavuso Attorneys, I would like to book a consultation.\n\n"
         f"👤 Name: {name}\n"
@@ -50,16 +39,10 @@ def submit():
         f"📝 Case Overview: {message}"
     )
     
-    # 3. Format the text safely for web link rules
     encoded_message = urllib.parse.quote(whatsapp_message)
-    
-    # 4. Paste your real Eswatini phone number below (Include country code 268)
-    YOUR_WHATSAPP_NUMBER = "26876713590"  # <-- Change this to your real number!
-    
-    # 5. Create the launch link
+    YOUR_WHATSAPP_NUMBER = "26876000000"  # <-- Change this to your real phone number later!
     whatsapp_link = f"https://wa.me{YOUR_WHATSAPP_NUMBER}?text={encoded_message}"
     
-    # 6. Redirect the client's screen straight into WhatsApp!
     return f"""
     <html>
     <head>
@@ -75,10 +58,7 @@ def submit():
         </div>
     </body>
     </html>
-
-    @app.route('/google8ac4eb74c3700bb7.html')
-def google_verify():
-    return "google-site-verification: google8ac4eb74c3700bb7.html"
+    """
 
 if __name__ == '__main__':
     initialize_db()
